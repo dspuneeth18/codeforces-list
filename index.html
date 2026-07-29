@@ -1730,7 +1730,7 @@ const hldDoneMedium = document.getElementById('hldDoneMedium');
 const hldDoneHard = document.getElementById('hldDoneHard');
 
 const hldAllItems = hldWeeks.flatMap(w => w.items);
-const hldCollapsed = new Set(); // week numbers currently collapsed
+const hldCollapsed = new Set(hldWeeks.map(w => w.week)); // all weeks collapsed by default
 
 function updateHldStats(){
   const total = hldAllItems.length;
