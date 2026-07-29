@@ -688,6 +688,160 @@
   .badge.r1000{color:var(--d1000);border-color:var(--d1000);background:color-mix(in srgb, var(--d1000) 12%, transparent);}
   .badge.r1100{color:var(--d1100);border-color:var(--d1100);background:color-mix(in srgb, var(--d1100) 12%, transparent);}
   .badge.r1200{color:var(--d1200);border-color:var(--d1200);background:color-mix(in srgb, var(--d1200) 12%, transparent);}
+  .badge.easy{color:var(--d800);border-color:var(--d800);background:color-mix(in srgb, var(--d800) 12%, transparent);}
+  .badge.medium{color:var(--d1000);border-color:var(--d1000);background:color-mix(in srgb, var(--d1000) 12%, transparent);}
+  .badge.hard{color:var(--d1200);border-color:var(--d1200);background:color-mix(in srgb, var(--d1200) 12%, transparent);}
+
+  .tag-chip{
+    font-family:var(--mono);
+    font-size:10px;
+    color:var(--text-dim);
+    background:var(--bg);
+    border:1px solid var(--line-soft);
+    padding:2px 8px;
+    border-radius:999px;
+    display:inline-block;
+    margin-left:6px;
+    vertical-align:middle;
+  }
+
+  /* ============ VIEW TABS ============ */
+  .view-tabs{
+    display:flex;
+    gap:4px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:4px;
+    margin:18px 0 4px;
+    width:fit-content;
+    box-shadow:var(--shadow);
+  }
+  .view-tab{
+    -webkit-appearance:none;
+    appearance:none;
+    border:none;
+    background:transparent;
+    color:var(--muted);
+    font-family:var(--mono);
+    font-size:12.5px;
+    font-weight:600;
+    padding:8px 18px;
+    border-radius:7px;
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  .view-tab:hover{color:var(--text);}
+  .view-tab.active{background:var(--accent-soft);color:var(--accent);}
+
+  .step[data-diff="easy"]{--tint:var(--d800); height:38px;}
+  .step[data-diff="medium"]{--tint:var(--d1000); height:54px;}
+  .step[data-diff="hard"]{--tint:var(--d1200); height:70px;}
+  .step[data-diff="all"]{height:32px; font-weight:600;}
+
+  .check-btn{
+    -webkit-appearance:none;
+    appearance:none;
+    background:none;
+    border:none;
+    padding:0;
+    cursor:pointer;
+  }
+
+  /* ============ HLD FASTRACK SHEET ============ */
+  .hld-stats-row{
+    display:flex;
+    align-items:center;
+    gap:26px;
+    flex-wrap:wrap;
+    margin:16px 0 8px;
+  }
+  .hld-stat-big{display:flex;flex-direction:column;}
+  .hld-stat-big-val{font-family:var(--mono);font-size:28px;font-weight:700;color:var(--accent);line-height:1;}
+  .hld-stat-big-lbl{font-size:12px;color:var(--muted);margin-top:4px;}
+  .hld-stat-mini{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:13px;color:var(--text-dim);}
+  .hld-stat-mini b{color:var(--text);}
+  .hld-note{
+    font-size:12px;
+    color:var(--muted);
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:9px 13px;
+    margin:8px 0 18px;
+  }
+  .hld-select{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:8px;
+    color:var(--text);
+    font-family:var(--mono);
+    font-size:12.5px;
+    padding:9px 10px;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+  }
+
+  .week-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:12px;
+    margin-bottom:12px;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+  .week-card.no-match{display:none;}
+  .week-header{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    padding:13px 16px;
+    background:transparent;
+    border:none;
+    cursor:pointer;
+    color:var(--text);
+    font-family:var(--sans);
+    font-size:14px;
+    font-weight:600;
+    text-align:left;
+  }
+  .week-header:hover{background:var(--accent-soft);}
+  .week-header-left{display:flex;align-items:center;gap:10px;}
+  .week-chevron{width:13px;height:13px;color:var(--muted);transition:transform .15s ease;flex-shrink:0;}
+  .week-card.collapsed .week-chevron{transform:rotate(-90deg);}
+  .week-count{font-family:var(--mono);font-size:12px;color:var(--muted);font-weight:500;}
+  .week-body{border-top:1px solid var(--line);}
+  .week-card.collapsed .week-body{display:none;}
+
+  .q-row{
+    display:flex;
+    gap:12px;
+    padding:12px 16px;
+    border-bottom:1px solid var(--line-soft);
+    align-items:flex-start;
+    transition:background .12s ease;
+  }
+  .q-row:last-child{border-bottom:none;}
+  .q-row:hover{background:var(--accent-soft);}
+  .q-row.hidden{display:none;}
+  .q-row.done{background:color-mix(in srgb, var(--d800) 4%, transparent);}
+  .q-check{flex-shrink:0;margin-top:1px;}
+  .q-num{font-family:var(--mono);font-size:11px;color:var(--muted);width:24px;flex-shrink:0;padding-top:4px;text-align:right;}
+  .q-body{flex:1;min-width:0;}
+  .q-text{font-size:13.5px;line-height:1.55;color:var(--text);}
+  .q-row.done .q-text{color:var(--text-dim);text-decoration:line-through;text-decoration-color:var(--line);}
+  .q-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;align-items:center;}
+  .q-chip{
+    font-family:var(--mono);
+    font-size:10.5px;
+    color:var(--text-dim);
+    background:var(--bg);
+    border:1px solid var(--line-soft);
+    padding:2px 8px;
+    border-radius:999px;
+  }
 
   .empty{
     text-align:center;
@@ -737,7 +891,7 @@
     </header>
 
     <div class="topbar-right">
-      <div class="cf-box">
+      <div class="cf-box" id="cfBox">
         <div class="cf-box-input">
           <span class="prefix">@</span>
           <input type="text" id="cfHandleInput" placeholder="CF handle" autocomplete="off" spellcheck="false">
@@ -758,6 +912,13 @@
       </div>
     </div>
   </div>
+
+  <div class="view-tabs" id="viewTabs">
+    <button class="view-tab active" data-view="cf">Codeforces</button>
+    <button class="view-tab" data-view="hld">HLD / System Design</button>
+  </div>
+
+  <div id="cfSection">
 
   <div class="progress-bar-wrap">
     <div class="progress-bar-fill" id="progressBarFill" style="width: 0%;"></div>
@@ -853,6 +1014,72 @@
     <tbody id="problemBody"></tbody>
   </table>
   <div class="empty" id="emptyState">No problems match your filters.</div>
+
+  </div><!-- /cfSection -->
+
+  <div id="hldSection" style="display:none">
+
+    <p class="sub" style="margin:14px 0 4px;">System Design Fastrack Sheet — 98 questions, Week 1–7. Situation-based practice log, mirrors the portal sheet exactly.</p>
+
+    <div class="hld-stats-row">
+      <div class="hld-stat-big">
+        <div class="hld-stat-big-val" id="hldPct">0%</div>
+        <div class="hld-stat-big-lbl"><span id="hldDoneTotal">0</span> / 98 solved</div>
+      </div>
+      <div class="hld-stat-mini">
+        <span class="badge easy">Easy</span>
+        <b id="hldDoneEasy">0</b> / 11
+      </div>
+      <div class="hld-stat-mini">
+        <span class="badge medium">Medium</span>
+        <b id="hldDoneMedium">0</b> / 44
+      </div>
+      <div class="hld-stat-mini">
+        <span class="badge hard">Hard</span>
+        <b id="hldDoneHard">0</b> / 43
+      </div>
+    </div>
+
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="hldProgressBarFill" style="width: 0%;"></div>
+    </div>
+
+    <p class="hld-note">This is your last-minute practice checklist — mark each question yourself after you practice it. Progress is saved on this device.</p>
+
+    <div class="ladder" id="hldLadder">
+      <button class="step active" data-diff="all">All</button>
+      <button class="step" data-diff="easy">Easy</button>
+      <button class="step" data-diff="medium">Medium</button>
+      <button class="step" data-diff="hard">Hard</button>
+    </div>
+    <div class="ladder-base"></div>
+
+    <div class="controls">
+      <div class="search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="hldSearchBox" type="text" placeholder="Filter by question or subtopic…">
+      </div>
+
+      <select id="hldLevelSelect" class="hld-select">
+        <option value="all">All levels</option>
+        <option value="L1">L1</option>
+        <option value="L2">L2</option>
+        <option value="L3">L3</option>
+      </select>
+
+      <div class="status-filters" id="hldStatusFilters">
+        <button type="button" class="status-pill active" data-status="all">All</button>
+        <button type="button" class="status-pill" data-status="todo">Todo</button>
+        <button type="button" class="status-pill" data-status="solved">Done</button>
+      </div>
+
+      <p class="count-box"><b id="hldShownCount">98</b> shown</p>
+    </div>
+
+    <div id="hldWeeks"></div>
+    <div class="empty" id="hldEmptyState">No questions match your filters.</div>
+
+  </div><!-- /hldSection -->
 
   <footer>generated from your problem list <span class="dot">·</span> links open on codeforces.com</footer>
 </div>
@@ -1368,6 +1595,303 @@ btnLight.addEventListener('click', () => setTheme('light'));
 
 const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
 setTheme(prefersLight ? 'light' : 'dark');
+
+/* ============ HLD FASTRACK SHEET (System Design) ============ */
+const hldWeeks = [
+  { week: 1, days: '1–7', items: [
+    { id: 1, text: 'How do you ensure message ordering in a system where User A sends multiple messages to User B? For example, if User A sends \'Hi\' followed by \'How are you?\', how do you guarantee the messages appear in the correct order?', level: 'L1', diff: 'Hard', subtopic: 'Message Ordering', day: 'Day 1' },
+    { id: 2, text: 'How would you handle a scenario where 100,000 users try to log in simultaneously, such as during peak hours?', level: 'L1', diff: 'Hard', subtopic: 'Caching & Concurrency', day: 'Day 1' },
+    { id: 3, text: 'What is rate limiting, and how would you implement it in the login flow?', level: 'L1', diff: 'Medium', subtopic: 'Rate Limiting', day: 'Day 2' },
+    { id: 4, text: 'Do you know about messaging queues like Kafka or RabbitMQ?', level: 'L1', diff: 'Easy', subtopic: 'Kafka / RabbitMQ', day: 'Day 2' },
+    { id: 5, text: 'How would you handle a surge of 100,000 login requests?', level: 'L1', diff: 'Hard', subtopic: 'High Traffic Handling', day: 'Day 3' },
+    { id: 6, text: 'The problem is to create an algorithm for token generation in a hospital appointment system. A patient comes to a receptionist, books an appointment, and receives a token. The token determines the appointment order. Edge cases include emergency cases (high priority), follow-up cases, and online bookings. How many edge cases can you identify for this problem?', level: 'L1', diff: 'Medium', subtopic: 'Edge Case Identification', day: 'Day 3' },
+    { id: 7, text: 'How would you assign the token number to ensure it reflects the priority order (e.g., emergency cases get lower token numbers)?', level: 'L1', diff: 'Medium', subtopic: 'Priority Queue', day: 'Day 4' },
+    { id: 8, text: 'How would you handle the scenario where a patient cancels an appointment? What happens to the token, and how does it affect the overall token order?', level: 'L1', diff: 'Medium', subtopic: 'Dynamic Queue Management', day: 'Day 4' },
+    { id: 9, text: 'Did you use microservices or monolithic architecture in your projects?', level: 'L1', diff: 'Easy', subtopic: 'Monolithic vs Microservices', day: 'Day 5' },
+    { id: 10, text: 'What are some of the technical challenges the team is currently working on?', level: 'L1', diff: 'Hard', subtopic: 'Performance Optimization', day: 'Day 5' },
+    { id: 11, text: 'What design patterns have you implemented, aside from the Single Responsibility Principle you mentioned earlier?', level: 'L1', diff: 'Medium', subtopic: 'Factory Method & Decorator Pattern', day: 'Day 6' },
+    { id: 12, text: 'How would you handle caching user data to avoid frequent database queries?', level: 'L1', diff: 'Medium', subtopic: 'TTL Mechanism', day: 'Day 6' },
+    { id: 13, text: 'If user data is stored in both the cache and the database, how would you handle updates to user information?', level: 'L1', diff: 'Medium', subtopic: 'Cache-Database Synchronization', day: 'Day 7' },
+    { id: 14, text: 'What is rate limiting, and how would you use it to prevent token misuse?', level: 'L1', diff: 'Medium', subtopic: 'Rate Limiting', day: 'Day 7' },
+  ] },
+  { week: 2, days: '8–14', items: [
+    { id: 15, text: 'Do you understand microservices?', level: 'L1', diff: 'Easy', subtopic: 'Microservices', day: 'Day 8' },
+    { id: 16, text: 'Are you familiar with microservices?', level: 'L1', diff: 'Easy', subtopic: 'Microservices', day: 'Day 8' },
+    { id: 17, text: 'Design a database for an e-commerce site like Amazon, focusing on adding items to a cart, processing payments, and managing inventory.', level: 'L1', diff: 'Hard', subtopic: 'E-Commerce Database Design', day: 'Day 9' },
+    { id: 18, text: 'What are the disadvantages of monolithic architecture?', level: 'L1', diff: 'Easy', subtopic: 'Monolithic Architecture', day: 'Day 9' },
+    { id: 19, text: 'What type of communication did you use between microservices in your projects?', level: 'L1', diff: 'Medium', subtopic: 'Service Communication', day: 'Day 10' },
+    { id: 20, text: 'Is the communication between microservices synchronous or asynchronous, and how do you handle asynchronous communication?', level: 'L1', diff: 'Medium', subtopic: 'Asynchronous Communication', day: 'Day 10' },
+    { id: 21, text: 'How are failures handled between microservices if one microservice is down?', level: 'L1', diff: 'Hard', subtopic: 'Fault Tolerance', day: 'Day 11' },
+    { id: 22, text: 'Explain the architecture of the project you mentioned, detailing the components and their interactions.', level: 'L1', diff: 'Medium', subtopic: 'Architecture', day: 'Day 11' },
+    { id: 23, text: 'Discuss the system design aspects you considered while building this project, such as scalability, performance, or security.', level: 'L1', diff: 'Medium', subtopic: 'System Design Aspects', day: 'Day 12' },
+    { id: 24, text: 'What is the correct architectural approach to handle email case sensitivity in authentication systems?', level: 'L1', diff: 'Hard', subtopic: 'Authentication Architecture', day: 'Day 12' },
+    { id: 25, text: 'Propose a long-term fix at the schema and application level to permanently resolve case-sensitivity issues in email authentication.', level: 'L1', diff: 'Hard', subtopic: 'Schema Design & Data Migration', day: 'Day 13' },
+    { id: 26, text: 'If there are 1000 API requests hitting your server simultaneously, how would you handle the load and ensure optimal performance?', level: 'L1', diff: 'Hard', subtopic: 'Load Handling & Optimization', day: 'Day 13' },
+    { id: 27, text: 'What was the architecture of your project?', level: 'L1', diff: 'Medium', subtopic: 'System Design', day: 'Day 14' },
+    { id: 28, text: 'How would you handle 1000 API requests occurring simultaneously in a web application?', level: 'L1', diff: 'Hard', subtopic: 'Scalability', day: 'Day 14' },
+  ] },
+  { week: 3, days: '15–21', items: [
+    { id: 29, text: 'How would you design and implement a system to handle 1,000 API requests per minute efficiently?', level: 'L1', diff: 'Medium', subtopic: 'Scalability & Performance', day: 'Day 15' },
+    { id: 30, text: 'In an Uber-like application, how would you design the system to search for available captains (drivers) efficiently?', level: 'L1', diff: 'Hard', subtopic: 'Geospatial Search', day: 'Day 15' },
+    { id: 31, text: 'How would you design the mechanism to send ride requests from a user to a captain (driver) in an Uber-like application?', level: 'L1', diff: 'Hard', subtopic: 'Real-Time Communication', day: 'Day 16' },
+    { id: 32, text: 'In an Uber-like application, how will you design the system to search for captains (drivers) efficiently?', level: 'L1', diff: 'Hard', subtopic: 'Location-Based Search', day: 'Day 16' },
+    { id: 33, text: 'How will you send a ride request from the user to the captain (driver) in an Uber-like application?', level: 'L1', diff: 'Hard', subtopic: 'Real-Time Communication', day: 'Day 17' },
+    { id: 34, text: 'How do you handle concurrency in your application? Explain the techniques or tools you used.', level: 'L1', diff: 'Medium', subtopic: 'Concurrency Handling', day: 'Day 17' },
+    { id: 35, text: 'How does the architecture of your Student AI Chatbot work?', level: 'L1', diff: 'Medium', subtopic: 'Architecture', day: 'Day 18' },
+    { id: 36, text: 'How can the Student AI Chatbot system be scaled for larger usage?', level: 'L1', diff: 'Hard', subtopic: 'System Scaling', day: 'Day 18' },
+    { id: 37, text: 'Pick any one of your projects and explain it in detail, including its purpose, architecture, and key features.', level: 'L1', diff: 'Medium', subtopic: 'Project Explanation', day: 'Day 19' },
+    { id: 38, text: 'What is Vertical Scaling?', level: 'L1', diff: 'Easy', subtopic: 'Scaling', day: 'Day 19' },
+    { id: 39, text: 'What is Horizontal Scaling?', level: 'L1', diff: 'Easy', subtopic: 'Scaling', day: 'Day 20' },
+    { id: 40, text: 'Explain your experience with microservices architecture and how you have implemented it in your projects.', level: 'L1', diff: 'Medium', subtopic: 'Architecture', day: 'Day 20' },
+    { id: 41, text: 'Explain how video streaming works in the backend, including protocols, data flow, and system components.', level: 'L1', diff: 'Hard', subtopic: 'Video Streaming Architecture', day: 'Day 21' },
+    { id: 42, text: 'What is a caching strategy, and why is it important in system design?', level: 'L1', diff: 'Easy', subtopic: 'Caching Strategy Basics', day: 'Day 21' },
+  ] },
+  { week: 4, days: '22–28', items: [
+    { id: 43, text: 'How did you implement caching in your project, and what challenges did you face?', level: 'L2', diff: 'Medium', subtopic: 'Implementation', day: 'Day 22' },
+    { id: 44, text: 'Explain the overall workflow and architecture of your project.', level: 'L2', diff: 'Medium', subtopic: 'Workflow Explanation', day: 'Day 22' },
+    { id: 45, text: 'How would you design a conversational AI system for different scenarios?', level: 'L2', diff: 'Hard', subtopic: 'Scenario-Based Design', day: 'Day 23' },
+    { id: 46, text: 'How would you design the architecture if real-time communication is required in a system?', level: 'L2', diff: 'Hard', subtopic: 'Architecture Design', day: 'Day 23' },
+    { id: 47, text: 'Explain the high-level design of your project, including architecture, components, and data flow.', level: 'L2', diff: 'Hard', subtopic: 'High-Level Design', day: 'Day 24' },
+    { id: 48, text: 'Explain the high-level design of your project, including its architecture and key components.', level: 'L2', diff: 'Hard', subtopic: 'High-Level Design', day: 'Day 24' },
+    { id: 49, text: 'What are Microservices?', level: 'L2', diff: 'Easy', subtopic: 'Introduction', day: 'Day 25' },
+    { id: 50, text: 'What are the advantages/features of Microservices compared to Monolithic architecture?', level: 'L2', diff: 'Easy', subtopic: 'Architecture Comparison', day: 'Day 25' },
+    { id: 51, text: 'Explain the high-level design of the projects you have worked on.', level: 'L2', diff: 'Medium', subtopic: 'Project Architecture', day: 'Day 26' },
+    { id: 52, text: 'Explain the end-to-end workflow of your project.', level: 'L2', diff: 'Medium', subtopic: 'Workflow Explanation', day: 'Day 26' },
+    { id: 53, text: 'How does Amazon handle a large number of customers at scale?', level: 'L2', diff: 'Hard', subtopic: 'Scalability', day: 'Day 27' },
+    { id: 54, text: 'Solve a resource allocation case study problem.', level: 'L2', diff: 'Hard', subtopic: 'Resource Allocation', day: 'Day 27' },
+    { id: 55, text: 'Describe the process and factors you would consider to determine how many petrol stations can be built in a particular city.', level: 'L2', diff: 'Hard', subtopic: 'Feasibility Analysis', day: 'Day 28' },
+    { id: 56, text: 'What is the architecture of your project?', level: 'L2', diff: 'Medium', subtopic: 'Architecture Explanation', day: 'Day 28' },
+  ] },
+  { week: 5, days: '29–35', items: [
+    { id: 57, text: 'Why did you choose this architecture?', level: 'L2', diff: 'Medium', subtopic: 'Architecture Justification', day: 'Day 29' },
+    { id: 58, text: 'How do different components of your project interact?', level: 'L2', diff: 'Medium', subtopic: 'Component Interaction', day: 'Day 29' },
+    { id: 59, text: 'How can you scale this project?', level: 'L2', diff: 'Medium', subtopic: 'Scalability', day: 'Day 30' },
+    { id: 60, text: 'How would the system handle increased users or data?', level: 'L2', diff: 'Medium', subtopic: 'Load Handling', day: 'Day 30' },
+    { id: 61, text: 'Can you explain the architecture of your application?', level: 'L2', diff: 'Medium', subtopic: 'Architecture Explanation', day: 'Day 31' },
+    { id: 62, text: 'Can you draw the architecture diagram of your project?', level: 'L2', diff: 'Medium', subtopic: 'Architecture Diagram', day: 'Day 31' },
+    { id: 63, text: 'Can you explain the architecture of your project?', level: 'L2', diff: 'Medium', subtopic: 'Architecture', day: 'Day 32' },
+    { id: 64, text: 'If we were to implement a workflow automation system in production where State 1 comes before State 2 and then State 3, what are three things that could functionally break?', level: 'L2', diff: 'Hard', subtopic: 'Edge Cases', day: 'Day 32' },
+    { id: 65, text: 'What is CQRS (Command Query Responsibility Segregation), and what are its benefits and drawbacks?', level: 'L2', diff: 'Hard', subtopic: 'CQRS', day: 'Day 33' },
+    { id: 66, text: 'Design a Low-Level System for BookMyShow.', level: 'L2', diff: 'Hard', subtopic: 'Low-Level Design', day: 'Day 33' },
+    { id: 67, text: 'Design a Low-Level System for a Library Management System.', level: 'L2', diff: 'Hard', subtopic: 'Low-Level Design', day: 'Day 34' },
+    { id: 68, text: 'Design a Low-Level System for an Apartment/Flat/Room management system.', level: 'L2', diff: 'Hard', subtopic: 'Low-Level Design', day: 'Day 34' },
+    { id: 69, text: 'Design a Low-Level System for an Elevator.', level: 'L2', diff: 'Hard', subtopic: 'Low-Level Design', day: 'Day 35' },
+    { id: 70, text: 'Design a Low-Level System for a Deck of Cards.', level: 'L2', diff: 'Medium', subtopic: 'Low-Level Design', day: 'Day 35' },
+  ] },
+  { week: 6, days: '36–42', items: [
+    { id: 71, text: 'Design a Low-Level System for an ATM using Object-Oriented Principles.', level: 'L2', diff: 'Hard', subtopic: 'Low-Level Design', day: 'Day 36' },
+    { id: 72, text: 'Design a Low-Level System for a Password Reset functionality.', level: 'L2', diff: 'Medium', subtopic: 'Low-Level Design', day: 'Day 36' },
+    { id: 73, text: 'Design a Low-Level System to handle Concurrent Password Reset requests.', level: 'L2', diff: 'Hard', subtopic: 'Low-Level Design', day: 'Day 37' },
+    { id: 74, text: 'Design a REST API for a given use case.', level: 'L2', diff: 'Medium', subtopic: 'Low-Level Design', day: 'Day 37' },
+    { id: 75, text: 'Design a High-Level System for a Notification System.', level: 'L2', diff: 'Hard', subtopic: 'High-Level Design', day: 'Day 38' },
+    { id: 76, text: 'Explain the Architecture of a project you have worked on.', level: 'L2', diff: 'Medium', subtopic: 'High-Level Design', day: 'Day 38' },
+    { id: 77, text: 'Design a High-Level System for a Flight Booking System.', level: 'L2', diff: 'Hard', subtopic: 'High-Level Design', day: 'Day 39' },
+    { id: 78, text: 'Design a High-Level System for Google Search.', level: 'L2', diff: 'Hard', subtopic: 'High-Level Design', day: 'Day 39' },
+    { id: 79, text: 'Design a High-Level System for Infinite File Loading.', level: 'L2', diff: 'Hard', subtopic: 'High-Level Design', day: 'Day 40' },
+    { id: 80, text: 'Explain the role and functioning of a Load Balancer in a distributed system.', level: 'L2', diff: 'Medium', subtopic: 'High-Level Design', day: 'Day 40' },
+    { id: 81, text: 'Explain the use of Redis in system design.', level: 'L2', diff: 'Medium', subtopic: 'High-Level Design', day: 'Day 41' },
+    { id: 82, text: 'Explain the concept of Microservices and their advantages.', level: 'L2', diff: 'Easy', subtopic: 'High-Level Design', day: 'Day 41' },
+    { id: 83, text: 'Explain strategies for Scaling a system.', level: 'L2', diff: 'Medium', subtopic: 'High-Level Design', day: 'Day 42' },
+    { id: 84, text: 'Explain the concept of Latency in system design and how to minimize it.', level: 'L2', diff: 'Medium', subtopic: 'High-Level Design', day: 'Day 42' },
+  ] },
+  { week: 7, days: '43–49', items: [
+    { id: 85, text: 'Explain Race Conditions and how to handle them in a system.', level: 'L2', diff: 'Medium', subtopic: 'High-Level Design', day: 'Day 43' },
+    { id: 86, text: 'Explain the Architecture of a project you have worked on in detail.', level: 'L2', diff: 'Medium', subtopic: 'Architecture Explanation', day: 'Day 43' },
+    { id: 87, text: 'Draw the Architecture of your project on a whiteboard and explain each component.', level: 'L2', diff: 'Medium', subtopic: 'Architecture Visualization', day: 'Day 44' },
+    { id: 88, text: 'Explain the Authentication Flow in your project.', level: 'L2', diff: 'Medium', subtopic: 'Authentication', day: 'Day 44' },
+    { id: 89, text: 'Explain the overall architecture/design of your project.', level: 'L2', diff: 'Medium', subtopic: 'Architecture Design', day: 'Day 45' },
+    { id: 90, text: 'How would your system handle 10x or 100x more users?', level: 'L3', diff: 'Hard', subtopic: 'Scalability', day: 'Day 45' },
+    { id: 91, text: 'Design a Notification System supporting Email, SMS, and Push Notifications.', level: 'L3', diff: 'Hard', subtopic: 'Notification System Design', day: 'Day 46' },
+    { id: 92, text: 'Design a URL Shortener.', level: 'L3', diff: 'Hard', subtopic: 'URL Shortener Design', day: 'Day 46' },
+    { id: 93, text: 'Design a Logger supporting multiple log levels.', level: 'L3', diff: 'Medium', subtopic: 'Logger Design', day: 'Day 47' },
+    { id: 94, text: 'Design a Parking Lot System.', level: 'L3', diff: 'Hard', subtopic: 'Parking Lot Design', day: 'Day 47' },
+    { id: 95, text: 'Design an API Rate Limiter.', level: 'L3', diff: 'Hard', subtopic: 'Rate Limiter Design', day: 'Day 48' },
+    { id: 96, text: 'Which Design Pattern would you use for your system and why?', level: 'L3', diff: 'Hard', subtopic: 'Design Patterns', day: 'Day 48' },
+    { id: 97, text: 'How would you make your design extensible?', level: 'L3', diff: 'Hard', subtopic: 'Extensibility', day: 'Day 49' },
+    { id: 98, text: 'How would your design handle failures?', level: 'L3', diff: 'Hard', subtopic: 'Failure Handling', day: 'Day 49' },
+  ] },
+];
+
+let hldDoneSet = new Set(JSON.parse(localStorage.getItem('hld_done_v2') || '[]'));
+let activeHldDiff = 'all';
+let activeHldLevel = 'all';
+let activeHldStatus = 'all';
+
+const hldWeeksEl = document.getElementById('hldWeeks');
+const hldShownCount = document.getElementById('hldShownCount');
+const hldEmptyState = document.getElementById('hldEmptyState');
+const hldProgressBarFill = document.getElementById('hldProgressBarFill');
+const hldSearchBox = document.getElementById('hldSearchBox');
+const hldLevelSelect = document.getElementById('hldLevelSelect');
+const hldPct = document.getElementById('hldPct');
+const hldDoneTotal = document.getElementById('hldDoneTotal');
+const hldDoneEasy = document.getElementById('hldDoneEasy');
+const hldDoneMedium = document.getElementById('hldDoneMedium');
+const hldDoneHard = document.getElementById('hldDoneHard');
+
+const hldAllItems = hldWeeks.flatMap(w => w.items);
+const hldCollapsed = new Set(); // week numbers currently collapsed
+
+function updateHldStats(){
+  const total = hldAllItems.length;
+  const done = hldDoneSet.size;
+  const doneEasy = hldAllItems.filter(it => it.diff === 'Easy' && hldDoneSet.has(it.id)).length;
+  const doneMedium = hldAllItems.filter(it => it.diff === 'Medium' && hldDoneSet.has(it.id)).length;
+  const doneHard = hldAllItems.filter(it => it.diff === 'Hard' && hldDoneSet.has(it.id)).length;
+
+  hldPct.textContent = `${total ? Math.round((done/total)*100) : 0}%`;
+  hldDoneTotal.textContent = done;
+  hldDoneEasy.textContent = doneEasy;
+  hldDoneMedium.textContent = doneMedium;
+  hldDoneHard.textContent = doneHard;
+  hldProgressBarFill.style.width = `${total ? Math.round((done/total)*100) : 0}%`;
+}
+
+function renderHld(){
+  hldWeeksEl.innerHTML = '';
+
+  hldWeeks.forEach(w => {
+    const weekDone = w.items.filter(it => hldDoneSet.has(it.id)).length;
+    const isCollapsed = hldCollapsed.has(w.week);
+
+    const card = document.createElement('div');
+    card.className = 'week-card' + (isCollapsed ? ' collapsed' : '');
+    card.dataset.week = w.week;
+
+    const header = document.createElement('button');
+    header.type = 'button';
+    header.className = 'week-header';
+    header.innerHTML = `
+      <span class="week-header-left">
+        <svg class="week-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        <span>Week ${w.week} · Days ${w.days}</span>
+      </span>
+      <span class="week-count">${weekDone} / ${w.items.length}</span>
+    `;
+    header.addEventListener('click', () => {
+      if (hldCollapsed.has(w.week)) hldCollapsed.delete(w.week);
+      else hldCollapsed.add(w.week);
+      renderHld();
+    });
+    card.appendChild(header);
+
+    const body = document.createElement('div');
+    body.className = 'week-body';
+
+    w.items.forEach(it => {
+      const isDone = hldDoneSet.has(it.id);
+      const row = document.createElement('div');
+      row.className = 'q-row' + (isDone ? ' done' : '');
+      row.dataset.diff = it.diff.toLowerCase();
+      row.dataset.level = it.level;
+      row.dataset.done = isDone ? 'true' : 'false';
+      row.dataset.search = (it.text + ' ' + it.subtopic).toLowerCase();
+
+      row.innerHTML = `
+        <button class="check-btn check-circle q-check ${isDone ? 'checked' : ''}" data-id="${it.id}" title="${isDone ? 'Done' : 'Mark as done'}">
+          ${isDone
+            ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>'
+            : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/></svg>'
+          }
+        </button>
+        <span class="q-num">${it.id}</span>
+        <div class="q-body">
+          <div class="q-text">${it.text}</div>
+          <div class="q-meta">
+            <span class="badge ${it.diff.toLowerCase()}">${it.diff}</span>
+            <span class="q-chip">${it.level}</span>
+            <span class="q-chip">${it.subtopic}</span>
+            <span class="q-chip">${it.day}</span>
+          </div>
+        </div>
+      `;
+      body.appendChild(row);
+    });
+
+    card.appendChild(body);
+    hldWeeksEl.appendChild(card);
+  });
+
+  updateHldStats();
+  applyHldFilters();
+}
+
+hldWeeksEl.addEventListener('click', (e) => {
+  const btn = e.target.closest('.check-btn');
+  if (btn) {
+    const id = parseInt(btn.dataset.id, 10);
+    if (hldDoneSet.has(id)) hldDoneSet.delete(id);
+    else hldDoneSet.add(id);
+    localStorage.setItem('hld_done_v2', JSON.stringify(Array.from(hldDoneSet)));
+    renderHld();
+  }
+});
+
+function applyHldFilters(){
+  const q = hldSearchBox.value.trim().toLowerCase();
+  let visible = 0;
+
+  document.querySelectorAll('.week-card').forEach(card => {
+    let visibleInWeek = 0;
+    card.querySelectorAll('.q-row').forEach(row => {
+      const diffMatch = activeHldDiff === 'all' || row.dataset.diff === activeHldDiff;
+      const levelMatch = activeHldLevel === 'all' || row.dataset.level === activeHldLevel;
+      const qMatch = !q || row.dataset.search.includes(q);
+      const isDone = row.dataset.done === 'true';
+      const statusMatch = activeHldStatus === 'all' ||
+        (activeHldStatus === 'solved' && isDone) ||
+        (activeHldStatus === 'todo' && !isDone);
+
+      const show = diffMatch && levelMatch && qMatch && statusMatch;
+      row.classList.toggle('hidden', !show);
+      if (show) { visibleInWeek++; visible++; }
+    });
+    card.classList.toggle('no-match', visibleInWeek === 0);
+  });
+
+  hldShownCount.textContent = visible;
+  hldEmptyState.style.display = visible === 0 ? 'block' : 'none';
+}
+
+document.querySelectorAll('#hldLadder .step').forEach(step => {
+  step.addEventListener('click', () => {
+    document.querySelectorAll('#hldLadder .step').forEach(s => s.classList.remove('active'));
+    step.classList.add('active');
+    activeHldDiff = step.dataset.diff;
+    applyHldFilters();
+  });
+});
+
+document.querySelectorAll('#hldStatusFilters .status-pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelectorAll('#hldStatusFilters .status-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+    activeHldStatus = pill.dataset.status;
+    applyHldFilters();
+  });
+});
+
+hldLevelSelect.addEventListener('change', () => {
+  activeHldLevel = hldLevelSelect.value;
+  applyHldFilters();
+});
+
+hldSearchBox.addEventListener('input', applyHldFilters);
+
+renderHld();
+
+/* ---- View Tab Switching ---- */
+const cfBoxEl = document.getElementById('cfBox');
+document.querySelectorAll('.view-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const view = tab.dataset.view;
+    document.getElementById('cfSection').style.display = view === 'cf' ? '' : 'none';
+    document.getElementById('hldSection').style.display = view === 'hld' ? '' : 'none';
+    cfBoxEl.style.display = view === 'cf' ? '' : 'none';
+  });
+});
 </script>
 </body>
 </html>
