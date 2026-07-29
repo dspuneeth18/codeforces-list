@@ -1530,8 +1530,8 @@ cfHandleInput.addEventListener('keydown', (e) => {
 
 // Filters
 const searchBox = document.getElementById('searchBox');
-const ratingSteps = document.querySelectorAll('.step');
-const statusPills = document.querySelectorAll('.status-pill');
+const ratingSteps = document.querySelectorAll('#ratingLadder .step');
+const statusPills = document.querySelectorAll('#statusFilters .status-pill');
 
 function applyFilters(){
   const q = searchBox.value.trim().toLowerCase();
